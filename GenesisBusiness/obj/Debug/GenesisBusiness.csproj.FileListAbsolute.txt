@@ -1,0 +1,12 @@
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\bin\Debug\GenesisBusiness.dll
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\bin\Debug\GenesisBusiness.pdb
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\bin\Debug\EntityFramework.dll
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\obj\Debug\GenesisBusiness.csprojAssemblyReference.cache
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\obj\Debug\GenesisBusiness.csproj.CoreCompileInputs.cache
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\obj\Debug\GenesisBusiness.csproj.CopyComplete
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\obj\Debug\GenesisBusiness.dll
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\obj\Debug\GenesisBusiness.pdb
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\bin\Debug\GenesisModels.dll
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\bin\Debug\GenesisModels.pdb
+C:\Code New\Demo Applications\Genesis\GenesisBusiness\bin\Debug\GenesisModels.dll.config
