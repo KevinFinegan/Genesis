@@ -83,7 +83,7 @@ namespace GenesisGUI
         }
 
         public bool ValidateData(Bus.Customer customer) {
-            //There are lots of ways and places of doing these checks
+            //KF There are lots of ways and places of doing these checks
             //Generally I put the screen logic here, that is mandatory fields are filled in and similar, anything that only needs the data on the screen
             //Then any business logic goes into the business layer, only it loads up other data from outside the screen
             //the validation can (and should) also go into the database so that any scripts also have it follow the business rules
@@ -109,30 +109,36 @@ namespace GenesisGUI
         public bool SaveData() {
             Bus.Customer customer = ModelFromView();
 
-            if(this.HasChanged() && this.ValidateData(customer)){
+            if(this.HasChanged()){
+                if(this.ValidateData(customer)){
 
-                try {
-                    customer.Update();                
+                    try {
+                        customer.Update();                
 
-                    CustomerSaveEventArgs args = new CustomerSaveEventArgs();
-                    args.CustomerId = this.CustomerId;
-                    args.NewFullName = customer.Model.LastName + ", " + customer.Model.FirstName;
-                    OnCustomerSave(this, args);
+                        CustomerSaveEventArgs args = new CustomerSaveEventArgs();
+                        args.CustomerId = this.CustomerId;
+                        args.NewFullName = customer.Model.LastName + ", " + customer.Model.FirstName;
+                        OnCustomerSave(this, args);
                 
-                    customer = null;
+                        customer = null;
 
-                    return true;
+                        return true;
 
-                } catch(Exception x){
-                    //KF: This is only very basic exception handling, a full solution would look for inner exceptions, particular types and much more
-                    g.LogEvent("Save Error: " +  x.Message, EventLogging.Events.EventLevel.Exception);
+                    } catch(Exception x){
+                        //KF: This is only very basic exception handling, a full solution would look for inner exceptions, particular types and much more
+                        g.LogEvent("Save Error: " +  x.Message, EventLogging.Events.EventLevel.Exception);
+                    }
                 }
+                return false;
+            } else {
+                //If nothing to do return true
+                return true;
             }
-            return false;
         }
 
         private void cmdSave_Click(object sender, EventArgs e) {
             if(SaveData()){
+                //KF could split this out to a "No changes made" or Saved
                 XtraMessageBox.Show("Customer Saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();

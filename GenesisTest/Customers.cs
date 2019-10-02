@@ -42,7 +42,10 @@ namespace GenesisTest
 
         [TestMethod]
         public void ValidateCustomer() {
-            //KF: In a full solution each piece of validation could have its own test
+            //KF: In a full solution each piece of validation could have its own test.
+            //The validation could return a collection of specific error numbers that the
+            //routines here would check for.  So instead of using a StringBuilder the
+            //validation functions would return a collection of errors.
 
             frmCustomer frm = new frmCustomer();
             

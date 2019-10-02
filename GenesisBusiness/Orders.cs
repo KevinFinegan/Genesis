@@ -58,7 +58,7 @@ namespace GenesisBusiness
 
     public class Order 
     {
-        //If I'd gone with inheritance or there were more classes I'd use something like AutoMapper, or a code generation tool to write the code 
+        //KF If I'd gone with inheritance or there were more classes I'd use something like AutoMapper, or a code generation tool to write the code 
         //for copying the properties
         
         public Models.Order Model{get; }

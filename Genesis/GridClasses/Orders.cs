@@ -16,7 +16,7 @@ using System.Drawing;
 
 namespace Genesis.GridClasses
 {
-    //The business classes could be used for display also, it would reduce some of the duplicated code and allow the same storage classes to be re-used
+    //KF The business classes could be used for display also, it would reduce some of the duplicated code and allow the same storage classes to be re-used
     //I've split them out so that all of the visual stuff is in this project/layer only.  As this kind of code is easily generated the extra coding does not add 
     //much extra effort.
 
@@ -42,7 +42,7 @@ namespace Genesis.GridClasses
         }
 
         public static void SetupGrid(GridView grd) {            
-            //There are lots of places that the grid setup could go
+            //KF There are lots of places that the grid setup could go
             //I've seen it in configuration files, in the editor, in code on the form, in code in classes ....
             //I prefer doing it this way as I think it is the most maintainable way and is the easiest to find
 
